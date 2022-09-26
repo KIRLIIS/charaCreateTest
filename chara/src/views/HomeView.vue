@@ -4,7 +4,7 @@
     {{ hairColor }}
     <div class="chara-area">
       <div class="front-area">
-        <img class="front front-color" :src="this.$store.state.frontHair" alt="">
+        <div class="front front-color" :style="{backgroundColor: hairColor}"></div>
         <img class="front" :src="this.$store.state.frontHair" alt="">
       </div>
       <div class="body-area">
@@ -72,7 +72,11 @@ export default {
 
 .front-color{
   position: absolute;
-  background: red;
+  width: 100%;
+  height: 100%;
+  mask-image: url("../assets/frontHair.png");
+  mask-size: 100% 100%;
+  mix-blend-mode: overlay;
 }
 
 
