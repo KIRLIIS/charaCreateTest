@@ -8,6 +8,7 @@ export default new Vuex.Store({
     body: require("../assets/body.png"),
     frontHair: require("../assets/frontHair.png"),
     backHair: require("../assets/backHair.png"),
+    hairColor: '#ffffff'
   },
   getters: {
   },

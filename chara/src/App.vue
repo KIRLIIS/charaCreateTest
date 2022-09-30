@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <nav>
+    <!-- <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
-    <router-view/>
+    <router-view/> -->
+    <ColorPicker/>
+    <ShowChara/>
   </div>
 </template>
+
+<script>
+import ColorPicker from './components/ColorPicker.vue'
+import ShowChara from './components/ShowChara.vue'
+
+export default {
+
+
+  components: {
+    ColorPicker,
+    ShowChara,
+}
+}
+</script>
 
 <style>
 #app {
