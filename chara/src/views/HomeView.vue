@@ -1,37 +1,15 @@
 <template>
-  <div class="home">
-
-  </div>
+  <hello-world />
 </template>
 
 <script>
+  import HelloWorld from '../components/HelloWorld'
 
+  export default {
+    name: 'Home',
 
-export default {
-  name: 'HomeView',
-  // data(){
-  //   return {
-  //     hairColor: '#ffffff',
-  //     frontImage: this.$store.state.front,
-  //   }
-  // },
-  // computed: {
-  //   hairColorChange(){
-  //     return{
-  //       '--background-color': this.hairColor,
-  //     }
-  //   }
-  // },
-
-}
+    components: {
+      HelloWorld,
+    },
+  }
 </script>
-
-<style scoped>
-
-
-
-
-
-
-
-</style>
