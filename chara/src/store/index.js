@@ -11,10 +11,19 @@ export default new Vuex.Store({
     hairColor: '#ffffff'
   },
   getters: {
+    getHairColor( state ){
+      return state.hairColor
+    }
   },
   mutations: {
+    changeHairColor(state, payload){
+      state.hairColor = payload.changeColor
+    }
   },
   actions: {
+    changeHairColorAction({commit}, payload){
+      commit('changeHairColor', payload)
+    }
   },
   modules: {
   }

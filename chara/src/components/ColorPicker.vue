@@ -1,6 +1,17 @@
 <template>
   <div>
-    <input type="color" name="" id="">
+    <v-color-picker
+      canvas-height="300"
+      dot-size="16"
+      swatches-max-height="200"
+      mode="rgba"
+      hide-mode-switch
+      hide-inputs
+      v-model="currentColor"
+    ></v-color-picker>
+    {{currentColor}}
+    {{ getHairColor }}
+    <v-btn @click="changeHairColor">髪色を変更</v-btn>
   </div>
 </template>
 
@@ -11,16 +22,23 @@ export default {
   name: 'ColorPicker',
   data() {
     return{
-      colors: {
-        hex: '#194d33',
-        hsl: { h: 150, s: 0.5, l: 0.2, a: 1 },
-        hsv: { h: 150, s: 0.66, v: 0.30, a: 1 },
-        rgba: { r: 25, g: 77, b: 51, a: 1 },
-        a: 1
-      }
+      name: "",
+      currentColor: '#ff0000',
+
     }
   },
-
+  methods:{
+    changeHairColor(){
+      this.$store.dispatch('changeHairColorAction', {
+        changeColor: this.currentColor
+      })
+    },
+  },
+  computed:{
+    getHairColor(){
+      return this.$store.getters.getHairColor
+    },
+  }
 }
 </script>
 
