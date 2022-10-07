@@ -11,6 +11,10 @@
       <img class="body" :src="this.$store.state.body" alt="">
     </div>
     <div class="back-area">
+      <div class="back back-color" :style="{backgroundColor: getHairColor}">
+      </div>
+      <div class="back back-color back2">
+      </div>
       <img class="back" :src="this.$store.state.backHair" alt="">
     </div>
   </div>
@@ -69,8 +73,21 @@ export default {
   mask-size: 100% 100%;
 }
 
-.front2{
-  background-color: white;
+
+.back-color,
+.back2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mask-image: url("../assets/backHair.png");
+  mix-blend-mode: overlay;
+  mask-size: 100% 100%;
+}
+
+.front2,
+.back2{
+  background-color: rgba(255,255,255,1);
+  mix-blend-mode: soft-light;
 }
 
 .body-area{
