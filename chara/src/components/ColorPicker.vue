@@ -7,11 +7,10 @@
       mode="rgba"
       hide-mode-switch
       hide-inputs
-      v-model="currentColor"
+      v-model="hex"
+      @input="changeHairColor"
     ></v-color-picker>
-    {{currentColor}}
-    {{ getHairColor }}
-    <v-btn @click="changeHairColor">髪色を変更</v-btn>
+    {{hairChange}}
   </div>
 </template>
 
@@ -23,20 +22,35 @@ export default {
   data() {
     return{
       name: "",
-      currentColor: '#ff0000',
+      hex: '#ffffff',
 
     }
   },
   methods:{
     changeHairColor(){
       this.$store.dispatch('changeHairColorAction', {
-        changeColor: this.currentColor
-      })
+        changeColor: this.hex
+      });
     },
+    testChange(){
+      console.log("change!!!!!!!!!");
+    }
   },
-  computed:{
-    getHairColor(){
-      return this.$store.getters.getHairColor
+  computed: {
+    // setHairColor(){
+    //   return (currentColor) => {
+    //     this.$store.dispatch('changeHairColorAction', {
+    //       changeColor: currentColor,
+    //     })
+    //   }
+    // },
+    hairChange: {
+      get(){
+        return this.$store.getters.getHairColor
+      },
+      set(hex){
+        this.$store.dispatch('changeHairColorAction', hex)
+      },
     },
   }
 }

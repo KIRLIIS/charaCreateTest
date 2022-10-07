@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-main>
-      <v-container>
+    <v-main >
+      <v-container >
         <v-row justify="space-between">
 
             
