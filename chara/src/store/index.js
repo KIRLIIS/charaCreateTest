@@ -5,9 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    body: require("../assets/body.png"),
-    frontHair: require("../assets/frontHair.png"),
-    backHair: require("../assets/backHair.png"),
+    body: require("../assets/newbody.png"),
+    frontHair: require("../assets/newFrontHair.png"),
+    sideHair: require("../assets/newSideHair01.png"),
+    backHair: require("../assets/newBackHair01.png"),
     hairColor: '#ffffff'
   },
   getters: {
