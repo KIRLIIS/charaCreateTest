@@ -3,8 +3,8 @@
     <div class="front-area">
       <div class="front front-color" :style="{backgroundColor: getHairColor}">
       </div>
-      <div class="front front-color front2">
-      </div>
+      <!-- <div class="front front-color front2">
+      </div> -->
       <img class="front" :src="this.$store.state.frontHair" alt="">
     </div>
 
@@ -50,7 +50,7 @@ export default {
 <style scoped>
 .chara-area{
   width: 50%;
-  height: auto;
+  height: 100%;
   position: relative;
 }
 
@@ -59,7 +59,7 @@ export default {
 .body-area,
 .back-area{
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
@@ -82,7 +82,7 @@ export default {
   height: 100%;
   mask-image: url("../assets/newFrontHair.png");
   mix-blend-mode: overlay;
-  mask-size: 100% 100%;
+  mask-size: 100% auto;
 }
 
 .side-area{
@@ -96,7 +96,7 @@ export default {
   height: 100%;
   mask-image: url("../assets/newSideHair01.png");
   mix-blend-mode: overlay;
-  mask-size: 100% 100%;
+  mask-size: 100% auto;
 }
 
 .back-color,
@@ -106,7 +106,7 @@ export default {
   height: 100%;
   mask-image: url("../assets/newBackHair01.png");
   mix-blend-mode: overlay;
-  mask-size: 100% 100%;
+  mask-size: 100% auto;
 }
 
 .front2,
