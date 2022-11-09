@@ -11,8 +11,8 @@
     <div class="side-area">
       <div class="side side-color" :style="{backgroundColor: getHairColor}">
       </div>
-      <div class="side side-color side2">
-      </div>
+      <!-- <div class="side side-color side2">
+      </div> -->
       <img class="side" :src="this.$store.state.sideHair" alt="">
     </div>
 
@@ -23,8 +23,8 @@
     <div class="back-area">
       <div class="back back-color" :style="{backgroundColor: getHairColor}">
       </div>
-      <div class="back back-color back2">
-      </div>
+      <!-- <div class="back back-color back2">
+      </div> -->
       <img class="back" :src="this.$store.state.backHair" alt="">
     </div>
   </div>
