@@ -44,6 +44,9 @@ export default {
     //     })
     //   }
     // },
+    getHairColor(){
+      return this.$store.getters.getHairColor
+    },
     hairChange: {
       get(){
         return this.$store.getters.getHairColor
